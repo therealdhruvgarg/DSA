@@ -8,7 +8,7 @@ int main()
 
     for (int rows = 0; rows < n; rows++)
     { // loop for rows
-        for (int col = 0; col <= rows; col++)
+        for (int col = 0; col <= rows; col++)//can also be like col<rows+1
         { // loop for columns
             cout << "* ";
         }
