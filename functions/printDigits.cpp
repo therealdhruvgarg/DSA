@@ -6,7 +6,7 @@ void printDigits(int n)
 {
     int digit;
     while (n != 0)
-    {
+    { 
         digit = n % 10;
         cout << digit << endl;
         n /= 10;
