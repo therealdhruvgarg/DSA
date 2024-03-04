@@ -1,18 +1,29 @@
 #include <iostream>
+#include <vector>
 #define loop(i, n) for (int i = 0; i < n; i++)
 #define loop1(i, n) for (int i = 1; i <= n; i++)
 using namespace std;
-float celciusFaherenheit(float n)
+vector<double> convertTemperature(double celsius)
 {
-    float ans;
-    ans = (n * 9 / 5) + 32;
-    return ans;
+    double k = celsius + 273.15;
+    double f = celsius * 1.80 + 32.00;
+    vector<double> v;
+    v.push_back(k);
+    v.push_back(f);
+    return v;
+}
+void printVector(const vector<double>& v) {
+    for (double element : v) {
+        cout << element << " ";
+    }
+    cout << endl;
 }
 int main()
 {
-    int n;
+    double n;
     cout << "Enter the number: ";
     cin >> n;
-    float result = celciusFaherenheit(n);
-    cout << "The result is: " << result;
+    vector result = convertTemperature(n);
+     printVector(result);
+   
 }
